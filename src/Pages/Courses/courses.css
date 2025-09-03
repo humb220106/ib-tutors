@@ -1,0 +1,158 @@
+.courses-page {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 160px);
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.courses-header h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.courses-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-icon {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.course-icon.ielts {
+  background-color: #28a745;
+}
+.course-icon.toefl {
+  background-color: #fd7e14;
+}
+.course-icon.gre {
+  background-color: #6f42c1;
+}
+.course-icon.sat {
+  background-color: #ffc107;
+  color: #212529;
+}
+.course-icon.gmat {
+  background-color: #17a2b8;
+}
+.course-icon.pte {
+  background-color: #e83e8c;
+}
+
+.course-card h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.course-card > p {
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.course-details {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.detail {
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.detail:last-child {
+  margin-bottom: 0;
+}
+
+.course-features {
+  margin-bottom: 30px;
+}
+
+.course-features h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.course-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-features li {
+  padding: 8px 0;
+  color: #495057;
+  position: relative;
+  padding-left: 25px;
+}
+
+.course-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding: 25px;
+  }
+}

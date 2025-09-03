@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "IELTS",
+    "description": "Comprehensive IELTS preparation covering all four skills: Listening, Reading, Writing, and Speaking. Achieve your target band score with our proven methodology.",
+    "duration": "4-18 weeks",
+    "mode": "Online/Offline",
+    "level": "All levels",
+    "features": [
+      "Mock tests and practice sessions",
+      "Individual speaking practice",
+      "Writing task feedback and correction",
+      "Listening and reading strategies",
+      "Band score prediction"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "TOEFL",
+    "description": "Complete TOEFL iBT preparation program designed to help you master all sections and achieve your target score for university admissions.",
+    "duration": "4-8weeks",
+    "mode": "Online/Offline",
+    "level": "Intermediate to Advanced",
+    "features": [
+      "Full-length practice tests",
+      "Integrated writing tasks",
+      "Speaking response strategies",
+      "Note-taking techniques",
+      "Time management skills"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "GRE",
+    "description": "Master GRE Verbal Reasoning, Quantitative Reasoning, and Analytical Writing with our comprehensive preparation program.",
+    "duration": "8-12 weeks",
+    "mode": "Online/Offline",
+    "level": "All levels",
+    "features": [
+      "Quantitative problem-solving strategies",
+      "Verbal reasoning techniques",
+      "Analytical writing practice",
+      "Vocabulary building program",
+      "Adaptive test simulations"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "SAT",
+    "description": "Boost your SAT scores with our personalized preparation program covering Math, Evidence-Based Reading and Writing sections.",
+    "duration": "8-12 weeks",
+    "mode": "Online/Offline",
+    "level": "High School students",
+    "features": [
+      "Math concept review and practice",
+      "Reading comprehension strategies",
+      "Grammar and usage rules",
+      "Essay writing techniques",
+      "College application guidance"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "GMAT",
+    "description": "Comprehensive GMAT preparation focusing on Quantitative, Verbal, Integrated Reasoning, and Analytical Writing sections.",
+    "duration": "12-16 weeks",
+    "mode": "Online/Offline",
+    "level": "Graduate level",
+    "features": [
+      "Data sufficiency strategies",
+      "Critical reasoning techniques",
+      "Sentence correction mastery",
+      "Integrated reasoning practice",
+      "Business school application tips"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "PTE",
+    "description": "PTE Academic preparation covering Speaking, Writing, Reading, and Listening with computer-based test strategies.",
+    "duration": "6-10 weeks",
+    "mode": "Online/Offline",
+    "level": "All levels",
+    "features": [
+      "Computer-based test familiarity",
+      "Speaking fluency development",
+      "Academic writing skills",
+      "Listening note-taking",
+      "Reading speed improvement"
+    ]
+  }
+]
