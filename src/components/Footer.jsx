@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="social-links">
               <a href="https://www.facebook.com/share/18ZKSDSeHX/" className="social-link">Facebook</a>
               <a href="https://www.instagram.com/ibprivatetutors?igsh=b2R2cDk4MTlxOW9p" className="social-link">Instagram</a>
-              <a href="#" className="social-link">WhatsApp</a>
+              <a href="https://wa.me/2347063970942" className="social-link">WhatsApp</a>
             </div>
           </div>
         </div>

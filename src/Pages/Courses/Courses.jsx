@@ -1,5 +1,6 @@
 import coursesData from "./Courses.json"
 import "./courses.css"
+import { Link } from "react-router-dom"
 
 const Courses = () => {
   return (
@@ -41,7 +42,11 @@ const Courses = () => {
                   ))}
                 </ul>
               </div>
-              <button className="btn register-btn">Register Now</button>
+              <center>
+             <Link to="/contact" className="btn register-btn">
+               Register Now
+                </Link>
+               </center>
             </div>
           ))}
         </div>

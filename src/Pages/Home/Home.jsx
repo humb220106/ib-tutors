@@ -12,7 +12,7 @@ const Home = () => {
   ============================ */
   const successStories = [
     {
-      name: "Sarah Johnson",
+      name: "Oluchi Ogoke",
       exam: "IELTS",
       score: "Band 8.5",
       story:
@@ -20,7 +20,7 @@ const Home = () => {
       image: "/professional-woman-smiling.png",
     },
     {
-      name: "Michael Chen",
+      name: "Tobilola",
       exam: "TOEFL",
       score: "115/120",
       story:
@@ -28,7 +28,7 @@ const Home = () => {
       image: "",
     },
     {
-      name: "Priya Patel",
+      name: "Mercy Pauline",
       exam: "GRE",
       score: "325/340",
       story:
