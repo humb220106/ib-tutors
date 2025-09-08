@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Info</h3>
             <div className="contact-info">
-              <p>📞+234 09161933186</p>
+              <p>📞+234 9161933186</p>
               <p>✉️ ibadanprivatetutor@gmail.com</p>
               <p>📱 @ibprivatetutors</p>
             </div>

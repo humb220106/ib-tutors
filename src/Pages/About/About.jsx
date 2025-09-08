@@ -3,17 +3,16 @@ import "./About.css"
 const About = () => {
   const tutors = [
     {
-      name: "Dr. Sarah Williams",
-      qualification: "PhD in English Literature",
+      name: "Mrs Peace Emmanuel-Ojo",
       specialties: ["IELTS", "TOEFL", "Academic Writing"],
       experience: "12 years",
-      image: "/professional-female-tutor.png",
+      image: "/teach1.jpg",
     },
     {
       name: "Prof. Michael Johnson",
       qualification: "MA in Applied Linguistics",
-      specialties: ["GRE", "GMAT", "Verbal Reasoning"],
-      experience: "15 years",
+      specialties: ["GRE", "GMAT"],
+      experience: "12 years",
       image: "/professional-male-tutor.png",
     },
     {
@@ -52,7 +51,7 @@ const About = () => {
         </section>
 
         {/* Our Mission Section */}
-        <section className="mission section">
+        <section className="mission section"> 
           <div className="mission-content">
             <h2 className="section-title">Our Mission</h2>
             <div className="mission-grid">

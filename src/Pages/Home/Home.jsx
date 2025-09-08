@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { FaDollarSign, FaChalkboardTeacher, FaChartLine } from "react-icons/fa"; 
+import { FaDollarSign, FaChalkboardTeacher, FaChartLine } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import "./Home.css"
 
 const Home = () => {
+  /* ============================
+     STATES
+  ============================ */
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0)
+  const [index, setIndex] = useState(0) // ✅ for hero slideshow
 
   /* ============================
      DATA
@@ -62,10 +66,10 @@ const Home = () => {
   ]
 
   const stats = [
-    { number: "12+", label: "Years of Experience", },
-    { number: "500+", label: "Successful Students", },
-    { number: "1,500+", label: "Hours of Training",  },
-    { number: "95%", label: "Success Rate",},
+    { number: "12+", label: "Years of Experience" },
+    { number: "5000+", label: "Successful Students" },
+    { number: "10,500+", label: "Hours of Training" },
+    { number: "95%", label: "Success Rate" },
   ]
 
   const benefits = [
@@ -89,7 +93,7 @@ const Home = () => {
       title: "Rapid Results",
       desc: "Accelerated learning techniques that deliver measurable improvements in record time.",
     },
-  ];
+  ]
 
   const courses = [
     { name: "IELTS", color: "#4CAF50", desc: "International English Language Testing" },
@@ -100,15 +104,29 @@ const Home = () => {
     { name: "PTE", color: "#E91E63", desc: "Pearson Test of English" },
   ]
 
+  const heroImages =
+   ["/hero-slide1.jpg", 
+    "/hero-slide2.jpg", 
+    "/hero-slide3.jpg"]
+
   /* ============================
      EFFECTS
   ============================ */
+  // Success Stories Carousel Auto-play
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStoryIndex((prev) => (prev + 1) % Math.ceil(successStories.length / 3))
     }, 5000)
     return () => clearInterval(interval)
   }, [successStories.length])
+
+  // Hero Slideshow Auto-play
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   /* ============================
      HELPERS
@@ -125,43 +143,40 @@ const Home = () => {
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-background">
-          <br />
-          <br />
+        {/* Background Slideshow */}
+        <div className="hero-slideshow">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={index}
+              src={heroImages[index]}
+              alt="Hero Slide"
+              className="hero-bg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2 }}
+            />
+          </AnimatePresence>
         </div>
-        <div className="container">
+
+        {/* Hero Content */}
+        <div className="hero-overlay">
           <motion.div
             className="hero-content"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1
-              className="hero-title"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
+            <h1 className="hero-title">
               Transform Your Future with
               <span className="gradient-text"> Expert Test Prep</span>
-            </motion.h1>
+            </h1>
+            <p className="hero-subtitle">
+           <b>Master IELTS, TOEFL, GRE, SAT, GMAT, PTE, CELPIP 
+            and unlock doors to world-class universities.</b>   
+            </p>
 
-            <motion.p
-              className="hero-subtitle"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Master IELTS, TOEFL, GRE, SAT, GMAT, PTE and unlock doors to world-class universities with our
-              revolutionary learning approach.
-            </motion.p>
-
-            <motion.div
-              className="hero-buttons"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <div className="hero-buttons">
               <button className="btn btn-primary pulse">
                 <span>Start Your Journey</span>
                 <div className="btn-glow"></div>
@@ -183,7 +198,7 @@ const Home = () => {
                   <span>Explore Courses</span>
                 </Link>
               </button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -199,7 +214,7 @@ const Home = () => {
           >
             Why Choose IB Private Tutors?
           </motion.h2>
-    
+
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -322,6 +337,7 @@ const Home = () => {
               </motion.div>
             </AnimatePresence>
 
+            {/* Carousel Indicators */}
             <div className="carousel-indicators">
               {Array.from({ length: Math.ceil(successStories.length / 3) }).map((_, index) => (
                 <button

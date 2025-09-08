@@ -103,7 +103,7 @@ const Contact = () => {
                 <div className="info-icon">📞</div>
                 <div className="info-content">
                   <h3>Phone Numbers</h3>
-                  <p>+234 09161933186</p>
+                  <p>+234 9161933186</p>
                 
                 </div>
               </div>
@@ -171,7 +171,7 @@ const Contact = () => {
               <div className="hours-list">
                 <div className="hours-item">
                   <span>Monday - Friday:</span>
-                  <span>9:00 AM - 8:00 PM</span>
+                  <span>8:00 AM - 8:00 PM</span>
                 </div>
                 <div className="hours-item">
                   <span>Saturday:</span>
