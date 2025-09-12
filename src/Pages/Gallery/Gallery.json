@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "IELTS Success Class",
+    "description": "Students preparing for IELTS with personalized coaching.",
+    "image": "/images/gallery/ielts-class.jpg"
+  },
+  {
+    "id": 2,
+    "title": "TOEFL Prep Session",
+    "description": "Interactive TOEFL practice session led by expert tutors.",
+    "image": "/images/gallery/toefl-session.jpg"
+  },
+  {
+    "id": 3,
+    "title": "GRE Workshop",
+    "description": "Focused GRE strategies workshop to boost student performance.",
+    "image": "/images/gallery/gre-workshop.jpg"
+  },
+  {
+    "id": 4,
+    "title": "SAT Mock Exam",
+    "description": "Students engaged in a simulated SAT test environment.",
+    "image": "/images/gallery/sat-mock.jpg"
+  },
+  {
+    "id": 5,
+    "title": "GMAT Training",
+    "description": "Personalized GMAT coaching for aspiring MBA students.",
+    "image": "/images/gallery/gmat-training.jpg"
+  },
+  {
+    "id": 6,
+    "title": "PTE Speaking Practice",
+    "description": "Practice session focusing on PTE speaking and listening.",
+    "image": "/images/gallery/pte-speaking.jpg"
+  }
+]

@@ -5,15 +5,15 @@ import { Link } from "react-router-dom"
 import "./Home.css"
 
 const Home = () => {
-  /* ============================
-     STATES
-  ============================ */
+  /* ============================ */
+  /* STATES */
+  /* ============================ */
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0)
   const [index, setIndex] = useState(0) // ✅ for hero slideshow
 
-  /* ============================
-     DATA
-  ============================ */
+  /* ============================ */
+  /* DATA */
+  /* ============================ */
   const successStories = [
     {
       name: "Oluchi Ogoke",
@@ -48,20 +48,20 @@ const Home = () => {
       image: "/placeholder-j6mvk.png",
     },
     {
-      name: "Emma Rodriguez",
-      exam: "GMAT",
-      score: "720/800",
+      name: "Testimony Olufemi",
+      exam: "IELTS",
+      score: "Band 8.0",
       story:
         "The analytical approach and mock tests prepared me perfectly for the GMAT. Now I'm pursuing my MBA at a top business school.",
-      image: "/professional-woman-confident.png",
+      image: "/test.jpg",
     },
     {
-      name: "James Thompson",
-      exam: "PTE",
-      score: "85/90",
+      name: "Mariam",
+      exam: "SELT",
+      score: "B1",
       story:
         "The speaking practice sessions were incredible. I gained confidence and achieved my target PTE score for immigration.",
-      image: "/placeholder-3ykmt.png",
+      image: "/Mariam.jpg",
     },
   ]
 
@@ -104,15 +104,10 @@ const Home = () => {
     { name: "PTE", color: "#E91E63", desc: "Pearson Test of English" },
   ]
 
-  const heroImages =
-   ["/hero-slide1.jpg", 
-    "/hero-slide2.jpg", 
-    "/hero-slide3.jpg"]
+  const heroImages = ["https://imageio.forbes.com/specials-images/imageserve/66cc763ec89993f99f155051/0x0.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds", 
+    "https://i.ytimg.com/vi/jT1pfBsL0Ig/maxresdefault.jpg", 
+    "https://static.tildacdn.com/tild3737-6638-4563-b033-356265616334/learn-english-at-ec-.jpg"]
 
-  /* ============================
-     EFFECTS
-  ============================ */
-  // Success Stories Carousel Auto-play
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStoryIndex((prev) => (prev + 1) % Math.ceil(successStories.length / 3))
@@ -128,75 +123,150 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
 
-  /* ============================
-     HELPERS
-  ============================ */
+  /* ============================ */
+  /* HELPERS */
+  /* ============================ */
   const getVisibleStories = () => {
     const startIndex = currentStoryIndex * 3
     return successStories.slice(startIndex, startIndex + 3)
   }
 
-  /* ============================
-     RENDER
-  ============================ */
+
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" style={{ height: "100vh" }}>
         {/* Background Slideshow */}
-        <div className="hero-slideshow">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={index}
-              src={heroImages[index]}
-              alt="Hero Slide"
-              className="hero-bg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.2 }}
+        <div
+          className="hero-slideshow"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            width: "100vw",
+            height: "100vh",
+            transform: "translateX(-50%)",
+            zIndex: 0,
+          }}
+        >
+          {heroImages.map((image, i) => (
+            <div
+              key={i}
+              className={`hero-slide ${i === index ? "active" : ""}`}
+              style={{
+                backgroundImage: `url(${image})`,
+                opacity: i === index ? 1 : 0,
+                transition: "opacity 1.2s ease-in-out",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                width: "100vw",
+                height: "100vh",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
             />
-          </AnimatePresence>
+          ))}
         </div>
 
         {/* Hero Content */}
-        <div className="hero-overlay">
+        <div className="hero-overlay" style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          zIndex: 2,
+          background: "rgba(20, 30, 40, 0.45)",
+        }}>
           <motion.div
             className="hero-content"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            style={{
+              textAlign: "center",
+              color: "#fff",
+              maxWidth: "700px",
+              margin: "0 auto",
+            }}
           >
-            <h1 className="hero-title">
-              Transform Your Future with
-              <span className="gradient-text"> Expert Test Prep</span>
+            <h1
+              style={{
+                fontSize: "3.2rem",
+                fontWeight: "800",
+                marginBottom: "18px",
+                letterSpacing: "1px",
+                textShadow: "0 4px 24px rgba(0,0,0,0.5)",
+              }}
+            >
+                  <br>
+                  </br>
+             <span style={{
+                background: "linear-gradient(90deg, #ffd700, #ff9800)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: "900",
+            
+              }}>IB Private Tutors</span>
             </h1>
-            <p className="hero-subtitle">
-           <b>Master IELTS, TOEFL, GRE, SAT, GMAT, PTE, CELPIP 
-            and unlock doors to world-class universities.</b>   
+            <p
+              style={{
+                fontSize: "1.3rem",
+                fontWeight: "500",
+                marginBottom: "32px",
+                color: "#fff",
+                textShadow: "0 2px 8px rgba(0,0,0,0.3)",
+                lineHeight: "1.5",
+              }}
+            >
+              Your go-to platform for mastering IELTS, TOEFL, GRE, SAT, GMAT, PTE, and more.<br />
+              Unlock your academic future with expert guidance and proven results.
             </p>
-
-            <div className="hero-buttons">
-              <button className="btn btn-primary pulse">
-                <span>Start Your Journey</span>
-                <div className="btn-glow"></div>
-              </button>
-              <button className="btn btn-secondary">
-                <Link
-                  to="/courses"
+            <div style={{
+              display: "flex",
+              gap: "20px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}>
+              <Link to="/courses">
+                <button
                   style={{
-                    textDecoration: "none",
-                    color: "white",
-                    display: "block",
-                    width: "100%",
-                    height: "100%",
-                    padding: "8px 16px",
-                    borderRadius: "5px",
-                    transition: "all 0.3s ease",
+                    background: "#007bff",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "1.1rem",
+                    borderRadius: "30px",
+                    padding: "14px 36px",
+                    border: "none",
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                    cursor: "pointer",
+                    transition: "background 0.3s",
                   }}
                 >
-                  <span>Explore Courses</span>
-                </Link>
+                  Explore Courses
+                </button>
+              </Link>
+              <button
+                style={{
+                  background: "#ffd700",
+                  color: "#222",
+                  fontWeight: "700",
+                  fontSize: "1.1rem",
+                  borderRadius: "30px",
+                  padding: "14px 36px",
+                  border: "none",
+                  boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                  cursor: "pointer",
+                  transition: "background 0.3s",
+                }}
+              >
+                Start Your Journey
               </button>
             </div>
           </motion.div>

@@ -9,18 +9,16 @@ const About = () => {
       image: "/teach1.jpg",
     },
     {
-      name: "Prof. Michael Johnson",
-      qualification: "MA in Applied Linguistics",
-      specialties: ["GRE", "GMAT"],
+      name: "Mr Ogunye Olayemi",
+      specialties: ["GRE", "GMAT", "Quantitative Reasoning"],
       experience: "12 years",
-      image: "/professional-male-tutor.png",
+      image: "/tutor2.jpg",
     },
     {
-      name: "Ms. Priya Sharma",
-      qualification: "MEd in TESOL",
-      specialties: ["SAT", "PTE", "Speaking Skills"],
+      name: "Mr Joseph Allen",
+      specialties: ["SAT", "GRE"],
       experience: "8 years",
-      image: "/professional-female-teacher.png",
+      image: "/tutor3.jpg",
     },
   ]
 

@@ -26,10 +26,9 @@ const Header = () => {
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container">
-        {/* Brand / Logo on the extreme left */}
+        {/* Brand / Logo */}
         <div className="nav-brand">
           <Link to="/" className="logo">
-            {/* Replace with your image */}
             <img src="/logo.jpg" alt="IB Private Tutors Logo" className="logo-img" />
             <div className="brand-text">
               <span className="brand-name">IB PRIVATE TUTORS</span>
@@ -62,6 +61,13 @@ const Header = () => {
             About Us
           </Link>
           <Link
+            to="/gallery"
+            className={`nav-link ${location.pathname === "/gallery" ? "active" : ""}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Gallery
+          </Link>
+          <Link
             to="/contact"
             className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
             onClick={() => setIsMenuOpen(false)}
@@ -70,7 +76,7 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Hamburger menu for mobile */}
+        {/* Hamburger for Mobile */}
         <button
           className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}

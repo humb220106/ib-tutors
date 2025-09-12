@@ -1,8 +1,7 @@
-
 .hero {
   position: relative;
-  height: 90vh;
-  width: 100%;
+  height: 100vh; /* Full screen */
+  width: 100vw;
   overflow: hidden;
   color: white;
 }
@@ -11,61 +10,93 @@
 .hero-slideshow {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
-/* Slides */
+/* Updated slides to use cover for proper hero image display */
 .hero-slide {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-
-
-  background-size: contain;   /* show full image */
-  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* fills the entire container */
+  background-position: center; /* centers the image */
   background-repeat: no-repeat;
-  background-color: #000;     /* fills empty space if aspect ratio differs */
+  transition: opacity 1.2s ease-in-out;
+  z-index: 0;
 }
 
-/* ✅ Mobile view → use cover for immersive look */
-@media (max-width: 768px) {
-  .hero-slide {
-    background-size: cover; /* fill screen on phones */
-    background-position: center;
-  }
+/* Added active state for smooth transitions */
+.hero-slide.active {
+  opacity: 1;
 }
 
 /* Overlay content */
 .hero-overlay {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
+  background: rgba(20, 30, 40, 0.45);
   text-align: center;
   padding: 0 20px;
-  top: 50%;
-  transform: translateY(-50%);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  etter-spacing: 1px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.7); /* Increased shadow for contrast */
+  /* Ensure text is above overlay and buttons */
+  z-index: 3;
+  /* Add word-break for small screens */
+  word-break: break-word;
 }
 
+/* Responsive design for hero title */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8); /* Stronger shadow for mobile */
+    padding: 0 10px;
+  }
+}
+
+
 .gradient-text {
-  background: linear-gradient(45deg, #ff9800, #ff5722);
+  background: linear-gradient(90deg, #ffd700, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 .hero-subtitle {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  line-height: 1.5;
 }
 
 .hero-buttons {
@@ -75,93 +106,45 @@
   flex-wrap: wrap;
 }
 
-/* Buttons */
-.btn {
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #ffd700;
-  color: #2c3e50;
-}
-
-.btn-primary:hover {
-  background-color: #e6c200;
-}
-
-.btn-secondary {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: #0056b3;
-}
-
-
-.benefits {
-  padding: 80px 20px;
-  background: #f9fbff;
-  text-align: center;
-}
-
-.benefits h2 {
-  font-size: 2rem;
+.hero-buttons .btn,
+.hero-buttons button {
+  border-radius: 30px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 50px;
-  color: #0f2b46;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* ✅ Responsive row grid */
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto; /* centers grid */
+.hero-buttons .btn-primary,
+.hero-buttons button.btn-primary,
+.hero-buttons button[style*="background: #007bff"] {
+  background: #007bff;
+  color: #fff;
 }
 
-.benefit-card {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-  text-align: center;
-  position: relative;
+.hero-buttons .btn-secondary,
+.hero-buttons button.btn-secondary,
+.hero-buttons button[style*="background: #ffd700"] {
+  background: #ffd700;
+  color: #222;
 }
 
-.benefit-card:hover {
-  box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+.hero-buttons .btn-primary:hover,
+.hero-buttons button.btn-primary:hover,
+.hero-buttons button[style*="background: #007bff"]:hover {
+  background: #0056b3;
 }
 
-.benefit-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #0f2b46;
+.hero-buttons .btn-secondary:hover,
+.hero-buttons button.btn-secondary:hover,
+.hero-buttons button[style*="background: #ffd700"]:hover {
+  background: #e6c200;
 }
 
-.benefit-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #0f2b46;
-}
-
-.benefit-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
-}
+/* Removed mobile-specific styles as the hero section is now fully responsive */
 
 /* ============================
    Courses Section (Modified)
@@ -226,12 +209,15 @@
 .stats {
   background-color: #2c3e50;
   color: white;
+  padding: 80px 20px;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .stat-card {
@@ -276,6 +262,8 @@
   gap: 25px;
   justify-content: center;
   align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ✅ Card Style */
@@ -386,4 +374,73 @@
 .indicator.active {
   background: #007bff;
   transform: scale(1.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #0f2b46;
+}
+
+/* ============================
+   Why Choose Us Section
+============================ */
+.benefits {
+  padding: 80px 20px;
+  background: #f9fbff;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #0f2b46;
+}
+
+.benefit-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0f2b46;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
 }
