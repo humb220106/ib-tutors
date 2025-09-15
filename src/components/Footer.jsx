@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Phone, Mail, Instagram } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -28,11 +29,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
 
@@ -40,9 +41,9 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Info</h3>
             <div className="contact-info">
-              <p>📞+234 9161933186</p>
-              <p>✉️ ibadanprivatetutor@gmail.com</p>
-              <p>📱 @ibprivatetutors</p>
+              <p><Phone size={16} style={{marginRight: 6, verticalAlign: "middle"}} />+234 9161933186</p>
+              <p><Mail size={16} style={{marginRight: 6, verticalAlign: "middle"}} />ibadanprivatetutor@gmail.com</p>
+              <p><Instagram size={16} style={{marginRight: 6, verticalAlign: "middle"}} />@ibprivatetutors</p>
             </div>
           </div>
 

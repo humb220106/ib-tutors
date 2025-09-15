@@ -3,19 +3,19 @@ import "./About.css"
 const About = () => {
   const tutors = [
     {
-      name: "Mrs Peace Emmanuel-Ojo",
+      name: "Peace Emmanuel-Ojo",
       specialties: ["IELTS", "TOEFL", "Academic Writing"],
       experience: "12 years",
       image: "/teach1.jpg",
     },
     {
-      name: "Mr Ogunye Olayemi",
+      name: "Ogunye Olayemi",
       specialties: ["GRE", "GMAT", "Quantitative Reasoning"],
       experience: "12 years",
       image: "/tutor2.jpg",
     },
     {
-      name: "Mr Joseph Allen",
+      name: "Joseph Allen",
       specialties: ["SAT", "GRE"],
       experience: "8 years",
       image: "/tutor3.jpg",

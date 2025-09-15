@@ -29,7 +29,7 @@ const Home = () => {
       score: "115/120",
       story:
         "Thanks to the comprehensive training program, I scored 115 on TOEFL and got admission to my dream university in the US.",
-      image: "",
+      image: "/tobilola.jpg",
     },
     {
       name: "Mercy Pauline",

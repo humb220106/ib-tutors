@@ -118,8 +118,6 @@ const Courses = () => {
                       ))}
                     </ul>
                   </div>
-
-                  <button className="register-button">Register Now</button>
                 </div>
               </div>
             ))}

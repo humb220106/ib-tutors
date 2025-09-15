@@ -1,38 +1,40 @@
 [
   {
     "id": 1,
-    "title": "IELTS Success Class",
+    "title": "",
     "description": "Students preparing for IELTS with personalized coaching.",
-    "image": "/images/gallery/ielts-class.jpg"
+    "image": "/images/visit.jpg"
   },
   {
     "id": 2,
-    "title": "TOEFL Prep Session",
+    "title": "Class Ongoing ",
     "description": "Interactive TOEFL practice session led by expert tutors.",
-    "image": "/images/gallery/toefl-session.jpg"
+    "image": "/images/class.jpg"
   },
   {
     "id": 3,
     "title": "GRE Workshop",
     "description": "Focused GRE strategies workshop to boost student performance.",
-    "image": "/images/gallery/gre-workshop.jpg"
+    "image": "/images/classinsession.jpg"
   },
+
   {
     "id": 4,
-    "title": "SAT Mock Exam",
-    "description": "Students engaged in a simulated SAT test environment.",
-    "image": "/images/gallery/sat-mock.jpg"
+    "title": "",
+    "description": "Practice session focusing on PTE speaking and listening.",
+    "image": "/student.jpg"
   },
+
   {
     "id": 5,
-    "title": "GMAT Training",
-    "description": "Personalized GMAT coaching for aspiring MBA students.",
-    "image": "/images/gallery/gmat-training.jpg"
-  },
-  {
-    "id": 6,
-    "title": "PTE Speaking Practice",
+    "title": "",
     "description": "Practice session focusing on PTE speaking and listening.",
-    "image": "/images/gallery/pte-speaking.jpg"
+    "image": "/images/ielts visit.jpg"
+  },
+   {
+    "id": 6,
+    "title": "A Visit To IELTS main branch ",
+    "description": "Practice session focusing on PTE speaking and listening.",
+    "image": "/british nigeria.jpg"
   }
 ]
