@@ -1,5 +1,6 @@
 import "./Footer.css"
 import { Phone, Mail, Instagram } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -9,7 +10,6 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="footer-section">
             <div className="footer-logo">
-           
               <img  
                 src="/logo.jpg"   
                 alt="IB Private Tutors Logo" 
@@ -29,11 +29,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/courses">Courses</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -51,9 +51,9 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Follow Us</h3>
             <div className="social-links">
-              <a href="https://www.facebook.com/share/18ZKSDSeHX/" className="social-link">Facebook</a>
-              <a href="https://www.instagram.com/ibprivatetutors?igsh=b2R2cDk4MTlxOW9p" className="social-link">Instagram</a>
-              <a href="https://wa.me/2347063970942" className="social-link">WhatsApp</a>
+              <a href="https://www.facebook.com/share/18ZKSDSeHX/" className="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/ibprivatetutors?igsh=b2R2cDk4MTlxOW9p" className="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://wa.me/2347063970942" className="social-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
           </div>
         </div>
