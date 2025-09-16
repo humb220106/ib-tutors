@@ -41,18 +41,18 @@ const Home = () => {
     },
     {
       name: "Kehinde",
-      exam: "SAT",
-      score: "Band ",
+      exam: "IELTS",
+      score: "Band 6.5",
       story:
         "The tutors understood my weaknesses and created a personalized study plan that boosted my IELTS score significantly.",
-      image: "/placeholder-j6mvk.png",
+      image: "/student.jpg",
     },
     {
-      name: "Testimony Olufemi",
+      name: "Olufemi Joy",
       exam: "IELTS",
       score: "Band 8.0",
       story:
-        "The analytical approach and mock tests prepared me perfectly for the GMAT. Now I'm pursuing my MBA at a top business school.",
+        "The analytical approach and mock tests prepared me perfectly for the IELTS.",
       image: "/test.jpg",
     },
     {
@@ -60,7 +60,7 @@ const Home = () => {
       exam: "SELT",
       score: "B1",
       story:
-        "The speaking practice sessions were incredible. I gained confidence and achieved my target PTE score for immigration.",
+            "The speaking practice sessions were incredible. I gained confidence and passed my exams",
       image: "/Mariam.jpg",
     },
   ]
