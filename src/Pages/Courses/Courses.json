@@ -3,7 +3,7 @@
     "id": 1,
     "title": "IELTS",
     "description": "Comprehensive IELTS preparation covering all four skills: Listening, Reading, Writing, and Speaking. Achieve your target band score with our proven methodology.",
-    "duration": "4-18 weeks",
+    "duration": "4-8 weeks",
     "mode": "Online/Offline",
     "level": "All levels",
     "features": [
@@ -18,7 +18,7 @@
     "id": 2,
     "title": "TOEFL",
     "description": "Complete TOEFL iBT preparation program designed to help you master all sections and achieve your target score for university admissions.",
-    "duration": "4-8weeks",
+    "duration": "4-8 weeks",
     "mode": "Online/Offline",
     "level": "Intermediate to Advanced",
     "features": [
@@ -63,7 +63,7 @@
     "id": 5,
     "title": "GMAT",
     "description": "Comprehensive GMAT preparation focusing on Quantitative, Verbal, Integrated Reasoning, and Analytical Writing sections.",
-    "duration": "12-16 weeks",
+    "duration": "8-12 weeks",
     "mode": "Online/Offline",
     "level": "Graduate level",
     "features": [
@@ -78,7 +78,7 @@
     "id": 6,
     "title": "PTE",
     "description": "PTE Academic preparation covering Speaking, Writing, Reading, and Listening with computer-based test strategies.",
-    "duration": "6-10 weeks",
+    "duration": "4-8 weeks",
     "mode": "Online/Offline",
     "level": "All levels",
     "features": [
