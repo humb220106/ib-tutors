@@ -40,11 +40,11 @@ const Home = () => {
       image: "/placeholder-nlgjl.png",
     },
     {
-      name: "David Wilson",
+      name: "Kehinde",
       exam: "SAT",
-      score: "1480/1600",
+      score: "Band ",
       story:
-        "The tutors understood my weaknesses and created a personalized study plan that boosted my SAT score significantly.",
+        "The tutors understood my weaknesses and created a personalized study plan that boosted my IELTS score significantly.",
       image: "/placeholder-j6mvk.png",
     },
     {
@@ -225,8 +225,10 @@ const Home = () => {
                 lineHeight: "1.5",
               }}
             >
-              Your go-to platform for mastering IELTS, TOEFL, GRE, SAT, GMAT, PTE, and more.<br />
-              Unlock your academic future with expert guidance and proven results.
+            Award-Winning Excellence in Test Preparation. 
+
+Proud recipient of the British Council IELTS Partner Award, we are your go-to platform for IELTS, TOEFL, GRE, SAT, GMAT, PTE, 
+and more. With expert tutors and proven results, we help you achieve your academic and professional dreams.
             </p>
             <div style={{
               display: "flex",
